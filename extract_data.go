@@ -9,10 +9,10 @@ import (
 	"strconv"
 )
 
-func extractFromCSVFile(fileName string) *Hotels {
-	csvfile, err := os.Open(fileName)
+func extractFromCSVFile(filePath string) *Hotels {
+	csvfile, err := os.Open(filePath)
 	if err != nil {
-		log.Fatalf("Error opening file(%s): %s", fileName, err)
+		log.Fatalf("Error opening file(%s): %s", filePath, err)
 	}
 	defer csvfile.Close()
 
@@ -28,7 +28,7 @@ func extractFromCSVFile(fileName string) *Hotels {
 
 	rawCSVData, err := reader.ReadAll()
 	if err != nil {
-		log.Fatalf("Error reading file(%s): %s", fileName, err)
+		log.Fatalf("Error reading file(%s): %s", filePath, err)
 	}
 
 	hotels := parseToStruct(rawCSVData)

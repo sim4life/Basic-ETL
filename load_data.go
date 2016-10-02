@@ -43,7 +43,7 @@ func (jw *JSONWriter) GetDataBytes(data DataWriter) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	return jsonData, err
+	return jsonData, nil
 }
 
 func loadIntoFile(hotelsData DataWriter, fileFormatWriter FileFormatWriter) {
