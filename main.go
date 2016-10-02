@@ -36,12 +36,6 @@ func main() {
 	loadIntoFile(hotels, tomlWriter)
 }
 
-func checkErr(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
-
 /*
  * The checkArgs() function returns a string of file path and
  * error if there is any.

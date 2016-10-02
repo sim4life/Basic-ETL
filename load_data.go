@@ -46,9 +46,12 @@ func (jw *JSONWriter) GetDataBytes(data DataWriter) ([]byte, error) {
 	return jsonData, nil
 }
 
-func loadIntoFile(hotelsData DataWriter, fileFormatWriter FileFormatWriter) {
+func loadIntoFile(hotelsData DataWriter, fileFormatWriter FileFormatWriter) error {
 	fileHandle, err := os.OpenFile(fileFormatWriter.GetFilePath(), os.O_CREATE|os.O_WRONLY, 0666)
-	checkErr(err)
+	if err != nil {
+		log.Println(err)
+		return err
+	}
 	defer fileHandle.Close()
 
 	bytesData, err := fileFormatWriter.GetDataBytes(hotelsData)
@@ -57,4 +60,6 @@ func loadIntoFile(hotelsData DataWriter, fileFormatWriter FileFormatWriter) {
 	}
 	fileHandle.Write(bytesData)
 	fileHandle.Sync()
+
+	return nil
 }
