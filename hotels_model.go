@@ -1,5 +1,6 @@
 package main
 
+//TOML output format requires slice to be embedded in a struct
 type Hotels struct {
 	Hotels []Hotel
 }
