@@ -11,4 +11,8 @@ $ ./Basic-ETL -s relative_directory/to_input_file.csv
 
 ## Instructions to test
 On the command line run:
-$ go test
+$ godep go test
+
+## Instructions to build
+On the command line run:
+$ godep go build
