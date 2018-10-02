@@ -1,10 +1,10 @@
 # Basic-ETL
 Basic data file reading, parsing, transforming (with optional sorting) and loading.
 
-# Hotel Agent Ratings
+## Hotel Agent Ratings
 This tool gives proper ratings to agents
 
-# Data Pipeline Case-Study
+## Data Pipeline Case-Study
 
 
 We maintain a big amount of hotel data.  
@@ -15,7 +15,7 @@ This should **not** be a one-off script. Instead, imagine your team
 will need to maintain the tool and extend it to other formats.  
 So, focus on code quality rather than performance.
 
-## Requirements
+### Requirements
 
 Your program needs to fulfill the following requirements:
 
@@ -38,7 +38,7 @@ Feel free to choose any programming language, framework, libraries or existing t
 The only constraint is that your tool needs to run on our local machine.  
 A graphical user interface is not necessary.
 
-## How we test your code
+### How we test your code
 
 We will test your code on an x86-64 machine with the most recent unmodified
 Debian stable release or the current Mac OSX - depending on your choice.
@@ -48,7 +48,7 @@ any special parameters, please mention them as well. All optional libraries
 should be either packaged with your code or easy to install with a package
 manager. Of course you can also provide a Dockerfile if you like.
 
-## Bonus tasks
+### Bonus tasks
 
 If you find the time, here are some nice bonus ideas. All of them are **optional**.
 
@@ -59,7 +59,7 @@ than about performance - although fast execution is a plus.
 - Add options to sort/group the data before writing it
 
 
-## Instructions to run
+### Instructions to run
 On the command line run:
 $ ./Basic-ETL relative_directory/to_input_file.csv
 
@@ -67,10 +67,10 @@ If you want to sort data before writing
 
 $ ./Basic-ETL -s relative_directory/to_input_file.csv
 
-## Instructions to test
+### Instructions to test
 On the command line run:
 $ godep go test
 
-## Instructions to build
+### Instructions to build
 On the command line run:
 $ godep go build
