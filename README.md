@@ -61,16 +61,20 @@ than about performance - although fast execution is a plus.
 
 ### Instructions to run
 On the command line run:
-$ ./Basic-ETL relative_directory/to_input_file.csv
+$ Basic-ETL relative_directory/to_input_file.csv
 
 If you want to sort data before writing
 
-$ ./Basic-ETL -s relative_directory/to_input_file.csv
+$ Basic-ETL -s relative_directory/to_input_file.csv
 
 ### Instructions to test
 On the command line run:
-$ godep go test
+$ go test
 
 ### Instructions to build
 On the command line run:
-$ godep go build
+$ go build
+
+### Instructions to install
+On the command line run:
+$ go install -mod=vendor
